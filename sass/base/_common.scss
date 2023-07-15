@@ -1,0 +1,34 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+ul,
+ol,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+img,
+a,
+b {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 250ms var(--timing-func);
+}
+
+.list {
+  list-style: none;
+}

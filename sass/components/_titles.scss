@@ -1,0 +1,13 @@
+.title {
+  margin-bottom: 30px;
+  @include _fs_lh_ls(28, 33);
+  text-align: center;
+  color: var(--titles-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    @include _fs_lh_ls(36, 42);
+  }
+}

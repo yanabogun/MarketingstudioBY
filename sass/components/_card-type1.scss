@@ -1,0 +1,27 @@
+.card-type1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--filter-btn-color);
+}
+
+.card-type1__title {
+  margin-bottom: 10px;
+
+  @include _fs_lh_ls(14, 16);
+  text-transform: uppercase;
+  color: var(--titles-text-color);
+}
+
+.card-type1__icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+
+.card-type1__description {
+  @include _fs_lh_ls(14, 24, 0.03);
+}

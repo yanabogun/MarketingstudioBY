@@ -1,0 +1,25 @@
+.card-type2 {
+  position: relative;
+}
+
+.card-type2__img {
+  background-color: var(--bg-color);
+  max-width: 100%;
+  height: auto;
+}
+
+.card-type2__desctiprtion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include _fw_fs_lh_ls(700, 14, 16);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--alternate-logo-color);
+}

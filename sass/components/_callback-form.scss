@@ -1,0 +1,22 @@
+.callback {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.callback__title {
+  margin-bottom: 12px;
+  @include _fs_lh_ls(20, 30);
+  color: var(--titles-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .callback__title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+}

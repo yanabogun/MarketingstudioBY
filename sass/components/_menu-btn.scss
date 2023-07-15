@@ -1,0 +1,23 @@
+.menu-opener-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px 0;
+  line-height: 0;
+}
+
+.menu-opener-btn__icon {
+  fill: var(--titles-text-color);
+  transition: fill 250ms var(--timing-func);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-opener-btn {
+    display: none;
+  }
+}

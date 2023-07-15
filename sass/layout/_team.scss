@@ -1,0 +1,15 @@
+.section_with-bg {
+  background-color: var(--filter-btn-color);
+}
+
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 120px) / 4);
+  }
+}

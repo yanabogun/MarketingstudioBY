@@ -1,0 +1,28 @@
+.header {
+  border-bottom-color: var(--hr-border-color);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .header__container {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+}

@@ -1,0 +1,22 @@
+.modal-btn {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  @include _fw_fs_lh_ls(700, 16, 30, 0.06);
+  text-align: center;
+
+  color: var(--alternate-logo-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color 250ms var(--timing-func);
+
+  &:hover,
+  &:focus {
+    background-color: var(--hover-modal-btn-color);
+  }
+}

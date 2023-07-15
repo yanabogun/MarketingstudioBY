@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Портфоліо</title>
+  </head>
+
+  <body data-body-hidden>
+    <!-- website header -->
+
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo header__logo link" href="./index.html"
+          ><span class="logo_accent-color">Web</span>Studio</a
+        >
+        <nav class="navigation">
+          <ul class="nav-menu list">
+            <li class="nav-menu__item">
+              <a class="nav-menu__link link" href="./index.html"> Студія </a>
+            </li>
+            <li class="nav-menu__item">
+              <a
+                class="nav-menu__link nav-menu__link_accent-color link"
+                href="./portfolio.html"
+              >
+                Портфоліо
+              </a>
+            </li>
+            <li class="nav-menu__item">
+              <a class="nav-menu__link link" href="#contacts"> Контакти </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="contacts-menu list">
+          <li class="contacts-menu__item">
+            <a
+              class="contacts-menu__link link"
+              href="mailto:info@devstudio.com"
+            >
+              <svg class="contacts-menu__icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="contacts-menu__item">
+            <a class="contacts-menu__link link" href="tel:+380961111111">
+              <svg class="contacts-menu__icon" width="10" height="16">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <button
+          class="menu-opener-btn"
+          type="button"
+          data-menu-button
+          aria-label="Кнопка відкритя мобільного меню"
+          aria-expanded="false"
+          aria-controls="mobile-menu-container"
+        >
+          <svg class="menu-opener-btn__icon" width="40" height="40">
+            <use
+              class="menu-opener-btn__icon_open"
+              href="./images/icons.svg#icon-menu-open"
+            ></use>
+          </svg>
+        </button>
+      </div>
+
+      <!-- MOBILE MENU with backdrop -->
+
+      <div
+        class="mobile-menu__backdrop backdrop backdrop_is-hidden is-close"
+        data-menu
+      >
+        <div class="mobile-menu" id="mobile-menu-container">
+          <div class="container mobile-menu__container">
+            <button
+              class="mobile-menu__close-btn"
+              type="button"
+              data-menu-close
+            >
+              <svg class="mobile-menu__close-icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mobile-menu__nav-menu list">
+              <li class="nav-menu__item">
+                <a class="nav-menu__link link" href="./index.html"> Студія </a>
+              </li>
+              <li class="nav-menu__item">
+                <a
+                  class="nav-menu__link nav-menu__link_accent-color link"
+                  href="./portfolio.html"
+                >
+                  Портфоліо
+                </a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="nav-menu__link link" href="#contacts"> Контакти </a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts list">
+              <li class="mobile-menu__phone">
+                <a
+                  class="mobile-menu__phone-link link"
+                  href="tel:+380961111111"
+                >
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mobile-menu__mail">
+                <a
+                  class="mobile-menu_mail-link link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="company-social list">
+              <li class="company-social__item">
+                <a
+                  href="#"
+                  class="company-social__link company-social__link_separator link"
+                  >Instagram
+                </a>
+              </li>
+              <li class="company-social__item">
+                <a
+                  href="#"
+                  class="company-social__link company-social__link_separator link"
+                  >Twitter
+                </a>
+              </li>
+              <li class="company-social__item">
+                <a
+                  href="#"
+                  class="company-social__link company-social__link_separator link"
+                  >Facebook
+                </a>
+              </li>
+              <li class="company-social__item">
+                <a
+                  href="#"
+                  class="company-social__link company-social__link link"
+                  >LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- portfolio section -->
+
+      <section class="section">
+        <div class="container">
+          <h1 class="visually-hidden">Портфоліо</h1>
+
+          <!-- projects filter -->
+
+          <ul class="filter portfolio__filter list">
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Все</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Веб-сайти</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Додатки</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Дизайн</button>
+            </li>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Маркетинг</button>
+            </li>
+          </ul>
+
+          <!-- projects list -->
+
+          <ul class="grid list">
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-desktop.webp    1x,
+                          ./images/portfolio/tehnokryak-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-desktop.jpg    1x,
+                          ./images/portfolio/tehnokryak-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-tablet.webp    1x,
+                          ./images/portfolio/tehnokryak-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-tablet.jpg    1x,
+                          ./images/portfolio/tehnokryak-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-mobile.webp    1x,
+                          ./images/portfolio/tehnokryak-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/tehnokryak-mobile.jpg    1x,
+                          ./images/portfolio/tehnokryak-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        class="card-type3__img"
+                        src="#"
+                        alt="Сторінка сайту"
+                      />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Mollitia quae nisi maiores inventore corporis fugiat
+                      doloremque ducimus omnis, vel voluptate fugit dolorum vero
+                      ab cum libero rerum quas? Reprehenderit, eos?
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name">Технокряк</h2>
+                    <p class="card-type3__type">Веб-сайт</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-desktop.webp    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-desktop.jpg    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-tablet.webp    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-tablet.jpg    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-mobile.webp    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/new-orlean-vs-golden-star-mobile.jpg    1x,
+                          ./images/portfolio/new-orlean-vs-golden-star-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img class="card-type3__img" src="#" alt="Постер" />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Nobis excepturi, doloremque sit incidunt, deleniti,
+                      blanditiis consectetur pariatur eos odio sed praesentium!
+                      Laudantium facilis corporis repudiandae ullam tempora?
+                      Quisquam, nobis necessitatibus!
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">
+                      Постер New Orlean vs Golden Star
+                    </h2>
+                    <p class="card-type3__type">Дизайн</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-desktop.webp    1x,
+                          ./images/portfolio/seafood-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-desktop.jpg    1x,
+                          ./images/portfolio/seafood-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-tablet.webp    1x,
+                          ./images/portfolio/seafood-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-tablet.jpg    1x,
+                          ./images/portfolio/seafood-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-mobile.webp    1x,
+                          ./images/portfolio/seafood-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/seafood-mobile.jpg    1x,
+                          ./images/portfolio/seafood-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        class="card-type3__img"
+                        src="#"
+                        alt="Логотип ресторана"
+                      />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quasi amet impedit corporis voluptatum iusto aliquid eum
+                      aspernatur est, hic quo saepe et suscipit dolorum quas
+                      quia quidem itaque nulla similique!
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">Ресторан Seafood</h2>
+                    <p class="card-type3__type">Додаток</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-desktop.webp    1x,
+                          ./images/portfolio/prime-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-desktop.jpg    1x,
+                          ./images/portfolio/prime-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-tablet.webp    1x,
+                          ./images/portfolio/prime-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-tablet.jpg    1x,
+                          ./images/portfolio/prime-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-mobile.webp    1x,
+                          ./images/portfolio/prime-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/prime-mobile.jpg    1x,
+                          ./images/portfolio/prime-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img class="card-type3__img" src="#" alt="Наушники" />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quo quasi unde laudantium, delectus fugiat soluta ab illum
+                      a eius error quos nemo aliquam dolorum praesentium sequi
+                      sed itaque perspiciatis id!
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">Проєкт Prime</h2>
+                    <p class="card-type3__type">Маркетинг</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-desktop.webp    1x,
+                          ./images/portfolio/boxes-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-desktop.jpg    1x,
+                          ./images/portfolio/boxes-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-tablet.webp    1x,
+                          ./images/portfolio/boxes-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-tablet.jpg    1x,
+                          ./images/portfolio/boxes-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-mobile.webp    1x,
+                          ./images/portfolio/boxes-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/boxes-mobile.jpg    1x,
+                          ./images/portfolio/boxes-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img class="card-type3__img" src="#" alt="Две коробки" />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eius perspiciatis fugiat, aut velit quis similique sint
+                      rerum nihil id minima saepe, voluptas iure commodi iusto
+                      facilis! Reiciendis velit ea nobis.
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">Проєкт Boxes</h2>
+                    <p class="card-type3__type">Приложение</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-desktop.webp    1x,
+                          ./images/portfolio/inspiration-has-no-borders-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-desktop.jpg    1x,
+                          ./images/portfolio/inspiration-has-no-borders-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-tablet.webp    1x,
+                          ./images/portfolio/inspiration-has-no-borders-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-tablet.jpg    1x,
+                          ./images/portfolio/inspiration-has-no-borders-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-mobile.webp    1x,
+                          ./images/portfolio/inspiration-has-no-borders-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/inspiration-has-no-borders-mobile.jpg    1x,
+                          ./images/portfolio/inspiration-has-no-borders-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        class="card-type3__img"
+                        src="#"
+                        alt="Страница сайта"
+                      />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eveniet soluta expedita, vitae rem modi facere distinctio
+                      inventore aperiam a amet odit illum hic unde officia
+                      quisquam repellendus ducimus at cum?
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">
+                      Inspiration has no Borders
+                    </h2>
+                    <p class="card-type3__type">Веб-сайт</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-desktop.webp    1x,
+                          ./images/portfolio/limited-edition-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-desktop.jpg    1x,
+                          ./images/portfolio/limited-edition-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-tablet.webp    1x,
+                          ./images/portfolio/limited-edition-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-tablet.jpg    1x,
+                          ./images/portfolio/limited-edition-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-mobile.webp    1x,
+                          ./images/portfolio/limited-edition-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/limited-edition-mobile.jpg    1x,
+                          ./images/portfolio/limited-edition-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        class="card-type3__img"
+                        src="#"
+                        alt="Открытая книга"
+                      />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Aperiam ipsum ea repellendus iusto modi repellat itaque
+                      rem nobis atque possimus, a nesciunt veniam harum
+                      voluptatibus, commodi consectetur placeat alias!
+                      Molestiae!
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">
+                      Видавництво Limited Edition
+                    </h2>
+                    <p class="card-type3__type">Дизайн</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-desktop.webp    1x,
+                          ./images/portfolio/lab-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-desktop.jpg    1x,
+                          ./images/portfolio/lab-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-tablet.webp    1x,
+                          ./images/portfolio/lab-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-tablet.jpg    1x,
+                          ./images/portfolio/lab-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-mobile.webp    1x,
+                          ./images/portfolio/lab-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/lab-mobile.jpg    1x,
+                          ./images/portfolio/lab-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img class="card-type3__img" src="#" alt="Бирка" />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Modi ex quae, sint illum recusandae fugiat. Dolores
+                      facilis perferendis, debitis obcaecati consequuntur
+                      possimus dignissimos illum atque quas tempore sit placeat
+                      ipsum.
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">Проєкт LAB</h2>
+                    <p class="card-type3__type">Маркетинг</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+
+            <li class="grid__cell portfolio__item">
+              <article class="card-type3">
+                <a class="card-type3__link link" href="#">
+                  <div class="card-type3__overlay">
+                    <picture class="pictureset">
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-desktop.webp    1x,
+                          ./images/portfolio/growing-business-desktop@2x.webp 2x
+                        "
+                        media="(min-width: 1200px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-desktop.jpg    1x,
+                          ./images/portfolio/growing-business-desktop@2x.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-tablet.webp    1x,
+                          ./images/portfolio/growing-business-tablet@2x.webp 2x
+                        "
+                        media="(min-width: 768px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-tablet.jpg    1x,
+                          ./images/portfolio/growing-business-tablet@2x.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-mobile.webp    1x,
+                          ./images/portfolio/growing-business-mobile@2x.webp 2x
+                        "
+                        media="(max-width: 767px)"
+                        type="image/webp"
+                      />
+                      <source
+                        srcset="
+                          ./images/portfolio/growing-business-mobile.jpg    1x,
+                          ./images/portfolio/growing-business-mobile@2x.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        class="card-type3__img"
+                        src="#"
+                        alt="Нотбкук с загруженным приложением"
+                      />
+                    </picture>
+                    <p class="card-type3__description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Aut ipsa magnam repudiandae consectetur molestias vero
+                      recusandae hic pariatur maiores, ab sint possimus harum
+                      vel nobis quisquam accusantium ratione qui aspernatur?
+                    </p>
+                  </div>
+                  <div class="card-type3__title">
+                    <h2 class="card-type3__name" lang="en">Growing Business</h2>
+                    <p class="card-type3__type">Додаток</p>
+                  </div>
+                </a>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer content -->
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer_top-wrapper">
+          <div class="footer__contacts">
+            <a
+              class="logo footer__logo logo_secondary-color link"
+              href="./index.html"
+              ><span class="logo_accent-color">Web</span>Studio</a
+            >
+            <address class="footer__address" id="contacts">
+              <ul class="footer__menu list">
+                <li class="footer__item">
+                  <a
+                    class="footer__link footer__link_address-color link"
+                    href="https://goo.gl/maps/BkVQLuisvxyrpe818"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="footer__social">
+            <b class="footer__title">приєднуйтесь</b>
+            <ul class="social-list footer__social-list list">
+              <li class="social-list__item">
+                <a
+                  href="#"
+                  class="social-list__link social-list__link_dark-theme-icon-bg link"
+                  aria-label="Іконка instagram"
+                >
+                  <svg class="social-list__icon social-list__icon_dark-theme">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a
+                  href="#"
+                  class="social-list__link social-list__link_dark-theme-icon-bg link"
+                  aria-label="Іконка twitter"
+                >
+                  <svg class="social-list__icon social-list__icon_dark-theme">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a
+                  href="#"
+                  class="social-list__link social-list__link_dark-theme-icon-bg link"
+                  aria-label="Іконка facebook"
+                >
+                  <svg class="social-list__icon social-list__icon_dark-theme">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a
+                  href="#"
+                  class="social-list__link social-list__link_dark-theme-icon-bg link"
+                  aria-label="Іконка linkedin"
+                >
+                  <svg class="social-list__icon social-list__icon_dark-theme">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__subscribe">
+          <b class="footer__title">Підпишись на розсилку</b>
+          <form
+            class="subscribe"
+            name="subscribe-form"
+            method="GET"
+            autocomplete="on"
+          >
+            <label for="email"></label>
+            <input
+              class="subscribe__mail-input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              required
+            />
+            <button class="subscribe__btn" type="submit">
+              Підписатись
+              <svg class="subscribe__icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>

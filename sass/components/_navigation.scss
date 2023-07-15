@@ -1,0 +1,89 @@
+@media screen and (max-width: 767px) {
+  .navigation {
+    display: none;
+  }
+
+  .nav-menu__item {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 64px;
+    }
+  }
+
+  .nav-menu__link {
+    @include _fw_fs_lh_ls(500, 40, 47, 0.02);
+    color: var(--titles-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+
+  .nav-menu__link_accent-color {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-menu {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-menu__item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  .nav-menu__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include _fw_fs_lh_ls(500, 14, 16, 0.02);
+    color: var(--titles-text-color);
+
+    &:hover::after,
+    &:focus::after,
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+      transform: scale(0);
+      transition: transform 250ms var(--timing-func);
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scale(1);
+    }
+  }
+
+  .nav-menu__link_accent-color {
+    color: var(--accent-color);
+  }
+
+  .nav-menu__link_accent-color::after {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,54 @@
+.logo {
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--main-logo-color);
+  animation-name: logo-animation;
+  animation-timing-function: cubic-bezier(0.37, 0.6, 0.66, 0.82);
+  animation-duration: 1200ms;
+  animation-delay: 500ms;
+}
+
+.logo_accent-color {
+  color: var(--accent-color);
+}
+
+.logo_secondary-color {
+  color: var(--alternate-logo-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(0.85, 1.6);
+  }
+  55% {
+    transform: scale(1, 0.6);
+  }
+  65% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 0.8);
+  }
+  85% {
+    transform: scale(1, 1.1);
+  }
+  95% {
+    transform: scale(1, 0.9);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
